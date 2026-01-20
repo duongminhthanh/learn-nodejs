@@ -1,7 +1,11 @@
 // import express
-const express = require('express');
+import express from 'express';
+import movieRoutes from './routes/movieRoutes.js';
 //app
 const app = express();
+
+//API route
+app.use("/movies", movieRoutes);
 //port
 const PORT = 5001;
 //server
